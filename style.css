@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: whitesmoke;
+  color: black;
+  margin: 0px 10px;
+  overflow-x: hidden;
+}
+
+header {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 200px;
+
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: olive;
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 5%;
+  background-color: rgba(229, 229, 229, 0.909);
+}
+
+.slide {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  animation: animate 6s ease infinite;
+  /* box-shadow: 1px 0px 5px 2px #1e1e1e96; */
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+
+
+
+.carousel div>img {
+  width: 100%;
+}
+
+#about {
+  margin-top: 10%;
+  border-top: 5px solid olive;
+  border-bottom: 5px solid olive;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#about>p {
+  width: 80%;
+  line-height: 40px;
+}
+
+#projects {
+  margin: 5rem 0;
+  /* Adjust margin as needed */
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  /* Add some spacing between cards */
+}
+
+.project-card {
+  background-color: rgba(128, 128, 0, 0.868);
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 400px;
+  color: white;
+  /* Set a fixed width for cards */
+  text-align: left;
+  /* Align content to the left */
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  /* Subtle hover effect */
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-card p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-details li {
+  margin-bottom: 0.5rem;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+footer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+footer .social-media a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  color: #f39c12;
+}
