@@ -1,0 +1,284 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Raspberry Pi 5 Cluster Guide</title>
+  <style>
+    .guide-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #f4f4f4;
+      margin: 5px 0;
+      padding: 10px;
+      border: #ccc 1px solid;
+    }
+
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .guide-content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .guide-content a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .guide-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="guide-content">
+    <h1>Configure Raspberry Pi 5 with Coral TPU and POE HAT</h1>
+    <img src="image.png" alt="alt text">
+    <p><strong>Date</strong>: May 2024 - June 1st</p>
+
+    <h2>Overview</h2>
+    <p>This guide will help you set up a Raspberry Pi 5 with a Google Coral TPU and a POE HAT for Power over Ethernet
+      (PoE) functionality.</p>
+
+    <h2>Hardware Requirements</h2>
+    <h3>Raspberry Pi 5</h3>
+    <ul>
+      <li>2.4GHz quad-core 64-bit Arm Cortex-A76 CPU</li>
+      <li>Dual 4Kp60 HDMI® display output</li>
+      <li>4Kp60 HEVC decoder</li>
+      <li>Dual-band 802.11ac Wi-Fi®, Bluetooth 5.0 / Bluetooth Low Energy (BLE)</li>
+      <li>High-speed microSD card interface with SDR104 mode support</li>
+      <li>2 × USB 3.0 ports, supporting simultaneous 5Gbps operation</li>
+      <li>2 × USB 2.0 ports</li>
+      <li>Gigabit Ethernet, with PoE+ support</li>
+    </ul>
+
+    <h3>Coral TPU</h3>
+    <ul>
+      <li>Compatibility: Supports the Coral TPU in M.2 format with an E-key interface.</li>
+      <li>PCIe x1 Interface Support: Maintains compatibility with PCIe x1 interface, supporting both Gen2 and Gen3
+        standards.</li>
+    </ul>
+
+    <h3>Additional Hardware</h3>
+    <ul>
+      <li>SSD 256GB</li>
+      <li>POE HAT</li>
+      <li>Coral TPU HAT</li>
+    </ul>
+
+    <h2>Review</h2>
+    <h3>Hardware</h3>
+    <img src="image-1.png" alt="alt text">
+    <img src="image-2.png" alt="alt text">
+    <img src="image-3.png" alt="alt text">
+
+    <h3><a href="https://www.waveshare.com/wiki/Raspberry_Pi_5">Raspberry Pi 5</a></h3>
+    <ul>
+      <li>Improved performance with upgraded CPU, GPU, and memory.</li>
+      <li>Accelerates machine learning inference tasks on edge devices.</li>
+      <li>Enhances efficiency and versatility in AI and IoT applications.</li>
+      <li>Performs machine learning tasks with high energy efficiency.</li>
+      <li>Ideal for deployment in resource-constrained environments.</li>
+      <li>Simplifies development with access to pre-trained models and tools.</li>
+      <li>Compatible with TensorFlow Lite framework for easy integration.</li>
+    </ul>
+
+    <img src="image-4.png" alt="alt text">
+
+    <h3><a href="https://www.waveshare.com/poe-hat-f.htm">POE HAT</a></h3>
+    <ul>
+      <li>Provides power over Ethernet.</li>
+      <li>Includes a cooling system with a metal heatsink.</li>
+      <li>Supports 802.3af/at network standard.</li>
+    </ul>
+
+    <img src="image-5.png" alt="alt text">
+
+    <h3><a href="https://pineboards.io/products/hat-ai-coral-edge-tpu-bundle-for-raspberry-pi-5">Coral TPU HAT</a></h3>
+    <ul>
+      <li>Google Coral Edge TPU designed for Raspberry Pi 5.</li>
+      <li>Coral TPU in M.2 format with E-key interface.</li>
+      <li>PCIe x1 interface support, integrable with Raspberry Pi 5 using PCI FPC.</li>
+    </ul>
+
+    <h2>Prerequisites</h2>
+    <ul>
+      <li>Basic Linux commands</li>
+      <li>Raspberry Pi 5 with RPi desktop / no desktop OS</li>
+      <li>All the hardware mentioned above</li>
+    </ul>
+
+    <h2>Configuration Steps</h2>
+    <ol>
+      <li>
+        <strong>Configure Hardware Settings:</strong>
+        <pre><code>
+sudo nano /boot/firmware/config.txt
+
+[all]
+# Enable the PCIe External connector.
+dtparam=pciex1
+kernel=kernel8.img
+# Enable Pineboards Hat Ai
+dtoverlay=pineboards-hat-ai
+
+sudo reboot
+      </code></pre>
+      </li>
+      <li>
+        <strong>Update Raspberry Pi Kernel and Install Kernel Headers:</strong>
+        <pre><code>
+sudo apt update
+sudo apt full-upgrade
+
+sudo apt install rpi-update
+
+sudo rpi-update
+sudo reboot
+
+sudo apt install git bc bison flex libssl-dev make libncurses5-dev
+sudo wget https://raw.githubusercontent.com/jgartrel/rpi-source/master/rpi-source -O /usr/bin/rpi-source
+sudo chmod +x /usr/bin/rpi-source
+rpi-source --tag-update
+
+rpi-source --default-config
+uname -a
+      </code></pre>
+        Expected output:
+        <pre><code>
+Linux coralpi 6.6.30-v8+ #1761 SMP PREEMPT Thu May  2 16:54:52 BST 2024 aarch64 GNU/Linux
+      </code></pre>
+      </li>
+      <li>
+        <strong>Install PCIe Driver and Edge TPU Runtime:</strong>
+        <pre><code>
+sudo apt update
+echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update
+curl -sS https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/google.gpg
+echo "deb [signed-by=/usr/share/keyrings/google.gpg] https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+sudo apt-get update
+sudo apt-get install cmake libedgetpu1-std devscripts debhelper dkms dh-dkms
+      </code></pre>
+      </li>
+      <li>
+        <strong>Install Gasket Driver:</strong>
+        <pre><code>
+git clone https://github.com/google/gasket-driver.git
+cd gasket-driver
+sudo debuild -us -uc -tc -b
+cd ..
+sudo dpkg -i gasket-dkms_1.0-18_all.deb
+      </code></pre>
+      </li>
+      <li>
+        <strong>Set Up udev Rule:</strong>
+        <pre><code>
+sudo sh -c "echo 'SUBSYSTEM==\"apex\", MODE=\"0660\", GROUP=\"apex\"' >> /etc/udev/rules.d/65-apex.rules"
+sudo groupadd apex
+sudo adduser $USER apex
+sudo reboot
+      </code></pre>
+      </li>
+      <li>
+        <strong>Verify Driver and Device:</strong>
+        <pre><code>
+sudo lspci -v
+ls /dev/apex_0
+      </code></pre>
+      </li>
+      <li>
+        <strong>Install Docker:</strong>
+        <pre><code>
+sudo apt install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo "deb [arch=\"\$(dpkg --print-architecture)\" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \$(. /etc/os-release && echo \"\$VERSION_CODENAME\") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+      </code></pre>
+      </li>
+      <li>
+        <strong>Build a Docker Image for Coral Testing:</strong>
+        <pre><code>
+Create a Dockerfile:
+FROM debian:10
+
+WORKDIR /home
+ENV HOME /home
+
+RUN cd ~ \
+    && apt-get update \
+    && apt-get install -y git nano python3-pip python-dev pkg-config wget usbutils curl \
+    && echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list \
+    && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+    && apt-get update \
+    && apt-get install -y edgetpu-examples
+
+Build the Docker image:
+sudo docker build -t "coral" .
+
+Run the Docker image:
+sudo docker run -it --device /dev/apex_0:/dev/apex_0 coral /bin/bash
+
+In the container, run an Edge TPU example:
+python3 /usr/share/edgetpu/examples/classify_image.py --model /usr/share/edgetpu/examples/models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite --label /usr/share/edgetpu/examples/models/inat_bird_labels.txt --image /usr/share/edgetpu/examples/images/bird.bmp
+
+Expected output:
+Poecile atricapillus (Black-capped Chickadee)
+Score :  0.44140625
+
+Poecile carolinensis (Carolina Chickadee)
+Score :  0.29296875
+      </code></pre>
+      </li>
+    </ol>
+  </div>
+</body>
+
+</html>
