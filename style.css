@@ -193,7 +193,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 2px;
 
 }
 
@@ -210,7 +210,7 @@ nav ul li a:hover {
 }
 
 .imgcont>img {
-  width: 80%;
+  width: 90%;
   height: auto;
 }
 
@@ -229,7 +229,7 @@ nav ul li a:hover {
 
 .project-details {
   padding: 20px;
-  color: #333;
+  color: #ffffff;
 }
 
 .project-details ul {
@@ -269,6 +269,7 @@ nav ul li a:hover {
   color: #0056b3;
   cursor: pointer;
 }
+
 
 
 #experience {
@@ -524,7 +525,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 2px;
 
 }
 
@@ -770,7 +771,8 @@ footer .social-media a:hover {
     overflow: hidden;
     transition: transform 0.3s ease;
     width: calc(100% - 20px);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr;
   }
 
@@ -779,7 +781,7 @@ footer .social-media a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 2px;
   }
 
   .project-card h3 {
@@ -797,7 +799,7 @@ footer .social-media a:hover {
 
   .project-details {
     padding: 20px;
-    color: #333;
+    color: #ffffff;
   }
 
   .project-details ul {
@@ -1079,7 +1081,7 @@ footer .social-media a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 2px;
   }
 
   .blog-post .imgCont img {

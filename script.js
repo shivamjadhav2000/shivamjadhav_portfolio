@@ -11,3 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(slideanimation, 6000)
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const yearofCopyright=document.querySelector('#yearofCopyright')
+  const year = new Date().getFullYear()
+  yearofCopyright.textContent = year
+})
+
