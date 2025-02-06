@@ -6,7 +6,22 @@ body {
   margin: 0px 10px;
   overflow-x: hidden;
 }
+#resumeDownload {
+ border:none;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
 
+}
+#resumeDownload:hover {
+  background-color: rgb(186, 186, 8);
+}
 header {
   border-bottom: 1px solid black;
   text-align: center;

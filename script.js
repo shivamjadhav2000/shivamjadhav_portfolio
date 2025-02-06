@@ -17,3 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   yearofCopyright.textContent = year
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const resumeDownload = document.querySelector('#resumeDownload')
+  resumeDownload.addEventListener('click', () => {
+    window.open('./shivamjadhav-software-egineer-resume.pdf', '_blank')
+  })
+
+})
