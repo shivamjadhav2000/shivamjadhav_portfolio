@@ -175,6 +175,60 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#research {
+  background: #f0f4f8;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin :10px 0px;
+  
+}
+#research h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  
+}
+#research header{
+border:none
+}
+#research article {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: calc(100% - 20px);
+  padding:10px;
+}
+#research article:hover {
+  transform: translateY(-10px);
+}
+#research article h2 {
+  text-align: left;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: olive;
+
+}
+#research article h3 {
+  margin: 20px 0;
+  font-size: 1.8em;
+}
+#research article footer {
+  padding: 20px;
+  background-color: #f0f4f800;
+}
+#research article footer button {
+  padding: 10px;
+  width:100px;
+  font-size: larger;
+  background-color: black;
+
+  color: white;
+  border: none;
+}
 
 #projects h2 {
   text-align: center;
