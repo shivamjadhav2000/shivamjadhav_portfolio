@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!resumeDownload.hasAttribute('data-listener')) {
       resumeDownload.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default behavior of the link or button, if any
-        const pdfUrl = './shivamjadhav-software-egineer-resume.pdf';
+        // const pdfUrl = './shivamjadhav-software-egineer-resume.pdf';
+        const pdfUrl='./softwareEngineer-AI.pdf'
         const newTab = window.open(pdfUrl, '_blank');
         
         // Check if the new tab opened successfully
