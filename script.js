@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // Slideshow logic
@@ -41,4 +44,52 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('Resume download button not found.');
   }
+  fetch('certifications.json')
+      .then(response => response.json())
+      .then(certifications => {
+          const container = document.getElementById('certifications-container');
+          certifications.forEach(cert => {
+              const card = document.createElement('div');
+              card.className = 'certification-card';
+
+              const words = cert.info.split(' ');
+              const truncatedInfo = words.slice(0, 30).join(' ');
+
+              card.innerHTML = `
+                  <div class="certification-card-inner">
+                      <div class="certification-card-front">
+                          <span class="title">${cert.title}</span>
+                          <img src="${cert.certificateLink}" alt="${cert.title} Certificate">
+                          <div class="skills">${cert.skills.map(skill => `<span>${skill}</span>`).join('')}</div>
+                          <div class="buttons">
+                              <button class="view-cert">Visit</button>
+                              <button class="flip-card">View More</button>
+                          </div>
+                      </div>
+                      <div class="certification-card-back">
+                          <h3><a href="${cert.link}" target="_blank">${cert.title}</a></h3>
+                          <img src="${cert.company}" alt="${cert.company} Logo" class="company-logo">
+                          <p class="category">Category: ${cert.category}</p>
+                          <p class="date">Date: ${cert.date}</p>
+                          <p>${truncatedInfo}${words.length > 30 ? '...' : ''}</p>
+                          <div class="skills">${cert.skills.map(skill => `<span>${skill}</span>`).join('')}</div>
+                      </div>
+                  </div>
+              `;
+              container.appendChild(card);
+
+              const innerCard = card.querySelector('.certification-card-inner');
+              const viewCertButton = card.querySelector('.view-cert');
+              const flipCardButton = card.querySelector('.flip-card');
+
+              viewCertButton.addEventListener('click', function() {
+                  window.location.href = cert.link;
+              });
+
+              flipCardButton.addEventListener('click', function() {
+                  innerCard.style.transform = innerCard.style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)';
+              });
+          });
+      })
+      .catch(error => console.error('Error fetching certifications:', error));
 });

@@ -558,7 +558,152 @@ border:none
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/* certifications.css */
+#certifications {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+#certifications h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.certification-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.certification-card-front,
+.certification-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.certification-card-front {
+  background-color: #fff;
+}
+
+.certification-card-back {
+  background-color: #f0f0f0;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.certification-card-front img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  flex-grow: 1;
+}
+
+.certification-card-front .title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: calc(100% - 20px);
+}
+
+.certification-card-front .skills {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.certification-card-front .skills span {
+  background-color: #e0e0e0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.25rem;
+  font-size: 0.8rem;
+}
+
+.certification-card .buttons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.certification-card .buttons button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+}
+
+.certification-card .buttons button:hover {
+  background-color: #0056b3;
+}
+
+.certification-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.certification-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.certification-card-front,
+.certification-card-back {
+transition: none;
+}
+
+.certification-card-back h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.certification-card-back .company-logo {
+  max-height: 30px;
+  margin-bottom: 10px;
+}
+
+.certification-card-back .category,
+.certification-card-back .date {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.certification-card-back a {
+  text-decoration: none;
+  color: #007bff;
+}
 
 #blog {
   background-color: #fff;
