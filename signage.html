@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Universal Digital Signage</title>
+    <link rel="stylesheet" href="project-details.css">
+</head>
+
+<body>
+
+    <div class="project-container">
+        <h1>Universal Digital Signage</h1>
+
+        <div class="video-section">
+            <h2>Project Demonstration</h2>
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/s3xBqRuiRdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="project-description">
+            <h2>About the Project</h2>
+            <p>The Universal Digital Signage web application provides a centralized digital signage solution. Images can be uploaded to the server and playlists created online. Playlists can be assigned to individual digital signs (hosts) or managed in groups. Playlist changes can be performed on a schedule with an option to add an interrupt schedule change (temporary change after which the sign or group reverts back to its normal schedule). Other features include interactive playlists: kiosks and presentations.</p>
+        </div>
+        <div class="contributions-container">
+            <h2>My Contributions</h2>
+        
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">💡</div>
+                    <div class="timeline-content">
+                        <h3>Innovative Solutions</h3>
+                        <p>Designed and deployed a <strong>Universal Digital Signage Product</strong> and <strong>Raspberry Pi Clusters</strong>, enhancing university infrastructure and reducing operational costs by <span class="highlight">$40,000</span>.</p>
+                    </div>
+                </div>
+        
+                <div class="timeline-item">
+                    <div class="timeline-icon">⚙️</div>
+                    <div class="timeline-content">
+                        <h3>Automation & Reliability</h3>
+                        <p>Engineered a <strong>status-checking system</strong> to monitor server uptime, proactively detecting downtime and sending <strong>real-time alerts</strong> for improved reliability.</p>
+                    </div>
+                </div>
+        
+                <div class="timeline-item">
+                    <div class="timeline-icon">🖥️</div>
+                    <div class="timeline-content">
+                        <h3>Server & AI Research</h3>
+                        <p>Managed <strong>server imaging (Ubuntu 24, RAID)</strong>, SSH, CUDA installations, and full server rack management for AI research, integrating <strong>Grafana monitoring</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-summary">
+                <h3>Universal Digital Signage System</h3>
+                <p><span class="highlight">University of North Texas | Sep 2023 – Present | Denton, Texas, USA</span></p>
+                <ul>
+                    <li>Developed a scalable solution with <strong>React.js, Node.js, MongoDB, Docker, and Raspberry Pi</strong>, saving <span class="highlight">$40,000</span>.</li>
+                    <li>Designed a <strong>secure platform</strong> with JWT/OAuth and created a custom Raspberry Pi OS for seamless control.</li>
+                    <li>Automated device configuration, significantly reducing manual workload.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="gallery-section">
+            <h2>Project Screenshots</h2>
+            <div class="gallery">
+                <img src="./assests/projects/signage/add_host_demo.png" alt="add host demo">
+                <img src='./assests/projects/signage/add_slide_to_playlist.png' alt="Add Slide Demo">
+                <img src="./assests/projects/signage/upload_images_gallery.png" alt="Upload Images Gallery">
+                <img src="./assests/projects/signage/playlist_create_canvas.png" alt="Playlist Create Canvas">
+                <img src="./assests/projects/signage/choose_image_for_slide.png" alt="Choose image for slide demo">
+                <img src="./assests/projects/signage/complete_playlist_demo.png" alt="Create Playlist Demo">
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <ul>
+                <li><strong>Frontend:</strong> React.js, JavaScript, Tailwind CSS, Material UI, Figma</li>
+                <li><strong>Backend:</strong> Express.js, Node.js, MongoDB</li>
+                <li><strong>DevOps:</strong> Nginx, Linux, SSH, Git, GitHub,Docker, </li>
+                <li><strong>hardware:</strong> Raspberry,Custom image creation,bash scripting, automations</li>
+            </ul>
+        </div>
+
+        <!-- <div class="github-link">
+            <a href="https://github.com/imageless-innovations" target="_blank">View on GitHub</a>
+        </div> -->
+    </div>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.project-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #28a745;
+}
+
+.video-section {
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
+}
+
+.project-description {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contributions-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.contributions-container h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid #ff9800;
+    margin-bottom: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.timeline-icon {
+    background: #ff9800;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    background: #292929;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    color: #ff9800;
+    margin-bottom: 5px;
+}
+
+/* Project Summary */
+.project-summary {
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-summary h3 {
+    color: #ff9800;
+}
+
+.project-summary .highlight {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.project-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-summary ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.project-summary ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: #ff9800;
+}
+
+
+.gallery-section {
+    margin: 40px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
+}
+
+.tech-stack {
+    margin: 30px 0;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+}
+
+.tech-stack ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-stack li {
+    margin: 10px 0;
+}
+
+.github-link {
+    margin-top: 20px;
+}
+
+.github-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.github-link a:hover {
+    background: #31e05a;
+}
+
+    </style>
+</body>
+
+</html>

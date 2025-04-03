@@ -1,0 +1,127 @@
+[
+    {
+        "title": "Advanced React",
+        "link": "https://www.coursera.org/account/accomplishments/verify/D4CIA78VXQDW",
+        "skills": ["Unit Testing",
+        "React (Web Framework)",
+        "Front-End Web Development"],
+        "info": "Developed advanced React component skills: Learned to create robust, reusable components using advanced techniques and design patterns.Mastered API interaction: Gained proficiency in fetching and posting data from remote servers via APIs.Enhanced testing capabilities: Became adept at testing React applications using React Testing Library.Improved development efficiency: Learned to integrate commonly used React libraries to streamline application development.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "2025-03-18",
+        "certificateLink":"assests/certificates/advancedReact.png"
+    },
+    {
+        "title": "HTML and CSS in depth",
+        "link": "https://www.coursera.org/account/accomplishments/records/6TLAKF4LZ17D",
+        "skills": ["HTML and CSS",
+        "React (Web Framework)",
+        "Debugging",
+        "JavaScript",
+        "User Interface"
+        ],
+        "info": "During this learning experience, I focused on building practical web development skills, including the creation of responsive forms and layouts using HTML5 and CSS, mastering the implementation of user interfaces with the Bootstrap framework, and developing proficiency in utilizing debugging tools. These skills collectively enhance my ability to design and build efficient, user-friendly web applications across various devices.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "2025-03-2",
+        "certificateLink":"assests/certificates/HTMLANDCSS.png"
+    },
+    {
+        "title": "Version Control",
+        "link": "https://www.coursera.org/account/accomplishments/verify/A2SPC9CBBNN5",
+        "skills": ["Version Control",
+        "Github",
+        "Bash (Unix Shell)",
+        "Web Development",
+        "Linux"],
+        "info": "i have learned about version control, Distributed , Centralised Version control system, resolve conflicts, git workflow, understand between staging , production and git cli,bash, cli.",
+        "company": "assests/certificates/meta.png",
+        "category":"software development",
+        "date": "2025-03-18",
+        "certificateLink":"assests/certificates/versionControl.png"
+    },
+    {
+        "title": "Tools of the Trade: Linux and SQL",
+        "link": "https://www.coursera.org/account/accomplishments/verify/D4CIA78VXQDW",
+        "skills": ["Command Line Interface (CLI)", "SQL", "Linux", "Bash"],
+        "info": "Gained OS understanding and CLI proficiency.Mastered Linux commands and SQL queries.Developed skills in system interaction and data retrieval.",
+        "company": "assests/certificates/google.png",
+        "category":"Database",
+        "date": "2025-01-28",
+        "certificateLink":"assests/certificates/linuxAndSql.png"
+    },
+    {
+        "title": "Programming with JavaScript",
+        "link": "https://www.coursera.org/account/accomplishments/verify/R46XJBRKKJCD",
+        "skills": ["Test-Driven Development", "JavaScript", "Front-End Web Development", "Object-Oriented Programming (OOP)"]
+        ,
+        "info": "I learned basic JavaScript coding. I developed skills in object and array handling. I gained proficiency in unit testing with Jest.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "2024-11-22",
+        "certificateLink":"assests/certificates/programmingWithJavaScript.png"
+    },
+    {
+        "title": "Introduction to Front-End Development",
+        "link": "https://coursera.org/share/ae9ac11424dca5515ebaba30a2db0c55",
+        "skills": ["Web Development Tools", "HTML and CSS", "Responsive Web Design", "Front-End Web Development", "User Interface"],
+        "info": "I learned the roles of front-end, back-end, and full-stack developers. I gained skills in creating and styling web pages with HTML and CSS. I understood the benefits of UI frameworks.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "September 11, 2024",
+        "certificateLink":"assests/certificates/IntoToFrontEnd.png"
+    },
+    {
+        "title": "Introduction to Back-End Development",
+        "link": "https://coursera.org/share/ae9ac11424dca5515ebaba30a2db0c55",
+        "skills": ["Web Development Tools", "HTML and CSS", "Responsive Web Design", "Front-End Web Development", "User Interface"],
+        "info": "I learned the roles of front-end, back-end, and full-stack developers. I gained skills in creating and styling web pages with HTML and CSS. I understood the benefits of UI frameworks.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "September 11, 2024",
+        "certificateLink":"assests/certificates/introToBackEnd.png"
+    },
+    
+    {
+        "title": "Docker For Developers",
+        "link": "https://www.linkedin.com/learning/certificates/ed9fc1e68d5e8bc69e092a5360bc9ef679b1d1da5dbf120bb783cbe8475d8b9f",
+        "skills": ["Docker", "Containerization", "DevOps", "Software Development", "Web Development"],
+        "info": " I learned to create and manage containers, build images, and deploy applications with Docker. I gained proficiency in containerization and deployment processes, enhancing my ability to streamline software development and deployment.",
+        "company": "assests/certificates/linkedin.png",
+        "category":"Front-End",
+        "date": "Jun 19, 2024",
+        "certificateLink":"assests/certificates/dockerForDev.png"
+    },
+    {
+        "title": "AWS Certified Cloud Practitioner",
+        "link": "https://www.udemy.com/certificate/UC-9691512f-e086-4a8d-aaa4-e54f433052d6/",
+        "skills": ["AWS", "Cloud Computing", "EC2", "S3", "RDS"],
+        "info": "I learned the fundamentals of cloud computing and AWS. I gained proficiency in using AWS services, including EC2, S3, and RDS. I developed skills in cloud security and cost management.",
+        "company": "assests/certificates/award.png",
+        "category":"Cloud Computing",
+        "date": "Mar 11, 2023",
+        "certificateLink":"assests/certificates/AWSCloudPrac.png"
+    },
+    {
+        "title": "Google Cloud Fundamentals: Core Infrastructure",
+        "link": "https://coursera.org/share/d81c3cc21fd742163d2a2628379dbfb9",
+        "skills": ["Google Compute Engine", "Google App Engine (GAE)", "Google Cloud Platform", "Cloud Computing"],
+        "info": "I identified the purpose of Google Cloud products, defined infrastructure organization, and explained basic infrastructure creation. I learned to select and use Google Cloud storage options.",
+        "company": "assests/certificates/google.png",
+        "category":"Cloud Computing",
+        "date": "july 04, 2021",
+        "certificateLink":"assests/certificates/GCP.png"
+    },
+    {
+        "title":"Deep Learning Specialization",
+        "link":"https://coursera.org/share/af8c97ec9d72cb6f17c62ac59969ac19",
+        "skills":["Recurrent Neural Network", "Tensorflow", "Convolutional Neural Network", "Artificial Neural Network", "Transformers"],
+        "info":"I built and trained deep neural networks, mastered key architecture parameters, and implemented vectorized neural networks. I learned to train test sets, analyze variance, use optimization algorithms, and build networks in TensorFlow. I built CNNs for detection and recognition, used neural style transfer, and worked with RNNs, NLP, and transformer models.",
+        "category":"Machine Learning",
+        "company":"assests/certificates/award.png",
+        "date":"october 21, 2020",
+        "certificateLink":"assests/certificates/deeplearning.png"
+
+    }
+    
+]
