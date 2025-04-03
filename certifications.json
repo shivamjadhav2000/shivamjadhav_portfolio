@@ -59,7 +59,7 @@
         "company": "assests/certificates/meta.png",
         "category":"Front-End",
         "date": "2024-11-22",
-        "certificateLink":"assests/certificates/programmingWithJavaScript.png"
+        "certificateLink":"assests/certificates/programmingWIthJavascript.png"
     },
     {
         "title": "Introduction to Front-End Development",
@@ -79,7 +79,7 @@
         "company": "assests/certificates/meta.png",
         "category":"Front-End",
         "date": "September 11, 2024",
-        "certificateLink":"assests/certificates/introToBackEnd.png"
+        "certificateLink":"assests/certificates/IntroToBackend.png"
     },
     
     {
