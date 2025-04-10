@@ -134,6 +134,48 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#design-persona ,#design-prototype{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding:0 5% ;
+
+
+}
+#design-persona h2, #design-prototype h2{
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+#design-persona .design-images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:2rem;
+
+}
+#design-persona .design-images img{
+  width: 500px;
+  height: auto;
+  align-self: center;
+  border-radius: 10px;
+}
+
+#design-prototype .design-images{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:2rem;
+}
+#design-prototype .design-images img{
+  width: auto;
+  height: 400px;
+  align-self: center;
+  border-radius: 10px;
+}
 
 
 @keyframes animate {
