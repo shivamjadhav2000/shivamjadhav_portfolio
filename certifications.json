@@ -1,5 +1,22 @@
 [
-    {
+    {   "title": "Meta Front-End Developer",
+        "link":"https://www.coursera.org/account/accomplishments/specialization/certificate/DC89LIS25E36",
+        "skills": ["Algorithms",
+        "Cascading Style Sheets (CSS)",
+        "Web Development",
+        "React",
+        "HTML",
+        "User Experience",
+        "HTML and CSS",
+        "JavaScript",
+        "UI/UX design"]
+        ,"info": "I learned to build responsive web applications using HTML, CSS, and JavaScript. I gained proficiency in React for front-end development and mastered UI/UX design principles. I developed skills in version control with Git and GitHub, and learned to create user-friendly interfaces.",
+        "company": "assests/certificates/meta.png",
+        "category":"Front-End",
+        "date": "2025-05-4",
+        "certificateLink":"assests/certificates/frontendDevMeta.png"
+    }
+    ,{
         "title": "Advanced React",
         "link": "https://www.coursera.org/account/accomplishments/verify/D4CIA78VXQDW",
         "skills": ["Unit Testing",
