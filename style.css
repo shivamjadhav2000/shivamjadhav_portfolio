@@ -80,7 +80,7 @@ nav ul li a:hover {
   border-radius: 3px;
   background-color: white;
   box-shadow: 2px 1px 10px 2px #ffffff4c;
-  width: 40%;
+  width: min(40%,500px);
   display: flex;
   justify-content: center;
   animation: animate 12s ease infinite;
