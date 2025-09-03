@@ -38,6 +38,34 @@
   ],
   "projects": [
     {
+  "title": "Health Care Dashboard",
+  "description": "A web application for managing patient diagnostics and monitoring vital signs, featuring interactive charts, diagnostic lists, and responsive UI for real-time data visualization.",
+  "highlights": [
+    "Interactive line charts for patient diagnosis history",
+    "Detailed patient vital statistics display",
+    "Scrollable diagnostic list for easy navigation",
+    "Responsive and user-friendly UI",
+    "Real-time data selection and visualization"
+  ],
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "HTML",
+    "Figma",
+    "Docker",
+    "UI/UX Design",
+    "Data Visualization",
+    "Chart.js",
+    "react-chartjs-2"
+  ],
+  "links": {
+    "learnMore": "https://shivamjadhav2000.github.io/HealthCareDashboard/"
+  },
+  "image": "./assests/project7.png"
+  
+},
+    {
       "title": "ArkDemoCRM – Custom CRM for Ark Trader",
       "description": "Developed a tailored CRM for Ark Trader, allowing brokers to manage client accounts, track trading activity, and streamline communication. Integrated with Ark Trader API for real-time data synchronization.",
       "highlights": [
@@ -306,11 +334,13 @@
       "category": "Frontend Development",
       "image": "./assests/skills/frontend.jpeg",
       "skills": [
-        { "name": "HTML", "level": 80 },
-        { "name": "CSS", "level": 80 },
+        { "name": "HTML", "level": 100 },
+        { "name": "CSS", "level": 100 },
         { "name": "JavaScript", "level": 100 },
+        { "name": "C#", "level": 80 },
+        { "name": "Dot Net", "level": 100 },
         { "name": "React", "level": 80 },
-        { "name": "Vue Js", "level": 60 }
+        { "name": "Vue Js", "level": 70 }
       ]
     },
     {
@@ -319,7 +349,9 @@
       "skills": [
         { "name": "Node.js", "level": 100 },
         { "name": "Express.js", "level": 100 },
-        { "name": "MongoDB", "level": 60 },
+        { "name": "MongoDB", "level": 100 },
+        { "name": "SQL", "level": 80 },
+
         { "name": "Redis", "level": 100 },
         { "name": "Python", "level": 100 }
       ]
@@ -330,7 +362,7 @@
       "skills": [
         { "name": "Azure", "level": 80 },
         { "name": "AWS", "level": 100 },
-        { "name": "Docker", "level": 60 },
+        { "name": "Docker", "level": 90 },
         { "name": "Nginx", "level": 80 }
       ]
     },
@@ -338,9 +370,9 @@
       "category": "AI & Machine Learning",
       "image": "./assests/skills/ai.jpeg",
       "skills": [
-        { "name": "Machine Learning", "level": 80 },
+        { "name": "Machine Learning", "level": 90 },
         { "name": "Large Language Model", "level": 80 },
-        { "name": "Deep Learning", "level": 60 },
+        { "name": "Deep Learning", "level": 100 },
         { "name": "AI Model Training", "level": 100 }
       ]
     },
@@ -348,9 +380,9 @@
       "category": "DevOps & Deployment",
       "image": "./assests/skills/devops.jpeg",
       "skills": [
-        { "name": "Docker", "level": 60 },
-        { "name": "Nginx", "level": 60 },
-        { "name": "Linux", "level": 80 },
+        { "name": "Docker", "level": 80 },
+        { "name": "Nginx", "level": 100 },
+        { "name": "Linux", "level": 100 },
         { "name": "PM2", "level": 100 }
       ]
     },
@@ -361,6 +393,23 @@
     }
   ],
   "certifications": [
+    {
+    "title": "Microsoft Certified: Azure Fundamentals",
+    "link": "https://learn.microsoft.com/api/credentials/share/en-us/ShivamJadhav-6544/37771034E92E5FCB?sharingId=26D17318C46AA963",
+    "skills": [
+        "Cloud Concepts",
+        "Azure Services",
+        "Azure Workloads",
+        "Security, Privacy, Compliance, and Trust",
+        "Azure Pricing and Support",
+        "IAM (Identity and Access Management)"
+    ],
+    "info": "This certification validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure. It covers general cloud concepts, core Azure services, security, privacy, compliance, trust, and Azure pricing and support.",
+    "company": "assests/certificates/az-900-badge.png",
+    "category": "Cloud",
+    "date": "2025-07-04",
+    "certificateLink": "assests/certificates/Az-900.png"
+},
     {
       "title": "Meta Front-End Developer",
       "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/DC89LIS25E36",
@@ -545,8 +594,18 @@
   ],
   "blogs": [
     {
+    "title": "From Simple Web App to Enterprise-Ready: A Step-by-Step AWS Architecture Journey",
+    "date": "Aug 23, 2025",
+    "image": "./assests/blogs/blog4.png",
+    "description": "A walkthrough of how a simple web app can evolve into a robust, enterprise-ready system on AWS, exploring components like EC2, ALB, Auto Scaling, and Aurora.",
+    "link": "https://medium.com/@jadhavshivam0228/from-simple-web-app-to-enterprise-ready-a-step-by-step-aws-architecture-journey-748e1d0a82f4",
+    "category": "Cloud",
+    "author": "Shivam Jadhav",
+    "tags": ["AWS", "Cloud", "Architecture", "Scalability", "EC2", "ALB", "Aurora", "DevOps"]
+},
+    {
       "title": "Do You Know How to Test Your Code? Let's Jest Together",
-      "date": "December 26, 2024",
+      "date": "Dec 26, 2024",
       "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3ky8R0LKsU03FvWkqOFA8A.png",
       "description": "Walkthrough of using Jest for unit, integration, and mock testing in JavaScript.",
       "link": "https://medium.com/@jadhavshivam0228/do-you-know-how-to-test-your-code-lets-jest-together-74269d5712a1"
