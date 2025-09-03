@@ -1,0 +1,583 @@
+{
+  "testimonials": [
+    {
+      "name": "Pranjal Thapliyal",
+      "role": "Software Developer @ ISN | MS in CS, UTA",
+      "relation": "Mentor during internship",
+      "message": "Worked with Shivam and impressed by his technical expertise and forward-thinking approach. Skilled in C#, .NET Core, SQL, and cloud technologies, bringing reliability and thoughtful problem-solving.",
+      "link": "https://www.linkedin.com/in/pranjal-thapliyal/"
+    },
+    {
+      "name": "Gregg Bursey",
+      "role": "Experienced Full Stack Software Engineer",
+      "relation": "Senior at ISN, did not manage directly",
+      "message": "Observed Shivam’s eagerness and capability during internship. A self-starter and hard worker who consistently improves any team or product he is part of.",
+      "link": "https://www.linkedin.com/in/gregg-bursey?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BvNfmxFuBS4S8ziRzOHldDA%3D%3D"
+    },
+    {
+      "name": "Jeremy Bernardoni",
+      "role": "Assistant Professor at the University of North Texas",
+      "relation": "Worked with Shivam during Graduate Assistant IT role",
+      "message": "Impressed by Shivam’s professionalism, creativity, and collaborative spirit. Combines technical expertise, design thinking, and problem-solving. Proactive, reliable, communicative, and adaptable.",
+      "link": "https://www.linkedin.com/in/jeremy-bernardoni-8572ba72?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BvNfmxFuBS4S8ziRzOHldDA%3D%3D"
+    },
+    {
+      "name": "Michael Baggett",
+      "role": "Director | Assistant Dean of Information Technology",
+      "relation": "Direct Manager",
+      "message": "Led exploratory AI efforts and technical projects including NVIDIA GPU setups, Raspberry Pi AI cluster, and Universal Digital Signage solution. Exceptional technical understanding of software and hardware; top performer in institution history.",
+      "link": "https://www.linkedin.com/in/baggettmichael/"
+    },
+    {
+      "name": "Yonathan Khoe",
+      "role": "Senior Systems Administrator",
+      "relation": "Mentor at CVAD, UNT",
+      "message": "Remarkably curious and motivated, quickly gained advanced system administration skills, Docker orchestration, server management. Made impactful contributions to automation, cloud infrastructure, and full-stack development. Dependable and highly skilled professional.",
+      "link": "https://www.linkedin.com/in/yonathan-khoe?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BgQceWscmQvq8TYLW1yJS0A%3D%3D"
+    }
+  ],
+  "projects": [
+    {
+      "title": "ArkDemoCRM – Custom CRM for Ark Trader",
+      "description": "Developed a tailored CRM for Ark Trader, allowing brokers to manage client accounts, track trading activity, and streamline communication. Integrated with Ark Trader API for real-time data synchronization.",
+      "highlights": [
+        "Full-stack CRM application with dashboards and reporting",
+        "Real-time updates and synchronization with trading platform",
+        "Improved client management and workflow efficiency",
+        "Secure authentication and role-based access control"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "C#",
+        "SQL",
+        "REST APIs",
+        "PostgreSQL"
+      ],
+      "links": {
+        "learnMore": "https://arkdemocrm.arktrader.io/"
+      },
+      "image": "./assests/project6.png"
+    },
+    {
+      "title": "Universal Digital Signage",
+      "description": "Centralized digital signage solution allowing users to create playlists, add host devices, and control displays.",
+      "highlights": [
+        "FrontEnd: React JS, JavaScript, Tailwind CSS, Material UI, Figma",
+        "Backend: Express.js, Node.js, MongoDB",
+        "DevOps: Nginx, Linux, SSH, Git, GitHub"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Material UI",
+        "Linux",
+        "Git",
+        "Docker"
+      ],
+      "links": {
+        "learnMore": "./signage.html"
+      },
+      "image": "./assests/projects/signage/complete_playlist_demo.png"
+    },
+    {
+      "title": "RAID Configurations on Dell R740 | RAID 1, RAID 5 & Hot Spare Explained",
+      "description": "Tutorial on setting up RAID configurations on Dell PowerEdge R740 server, including RAID 1, RAID 5, and Hot Spare options for redundancy and performance.",
+      "highlights": [
+        "Set up high-end AI server with NVIDIA V100 GPUs, 196GB RAM, RedHat OS, CUDA, and drivers",
+        "Understanding RAID 1 (mirroring) and RAID 5 (striping with parity)",
+        "Step-by-step RAID configuration",
+        "Role of Hot Spare to enhance fault tolerance"
+      ],
+      "technologies": [
+        "Dell PowerEdge R740",
+        "RAID 1",
+        "RAID 5",
+        "Hot Spare",
+        "NVIDIA V100",
+        "RedHat Linux",
+        "CUDA Toolkit"
+      ],
+      "links": {
+        "learnMore": "./ITEXP.html",
+        "youtube": "https://www.youtube.com/watch?v=-RiUdptd0Wc"
+      },
+      "image": "./assests/RAIDsetup.png"
+    },
+    {
+      "title": "Accessibility Bug Prediction Model with Jira Plugin",
+      "description": "Integrated a fine-tuned ALBERT model into Jira to classify accessibility-related software bug reports, under research guidance of Professor Wajdi Aljedaani.",
+      "highlights": [
+        "Trained ALBERT model from scratch using custom dataset",
+        "Developed Jira plugin for model integration",
+        "End-to-end training, testing, and deployment",
+        "Focused on UX and Human-Centered AI principles"
+      ],
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "ALBERT NLP Model",
+        "Jira Plugin",
+        "Machine Learning",
+        "NLP"
+      ],
+      "links": {
+        "learnMore": "https://huggingface.co/spaces/shivamjadhav/albert_latest_96",
+        "tryPlugin": "https://a11-pri-plugin.onrender.com/install"
+      },
+      "image": "./assests/project5-b.png"
+    },
+    {
+      "title": "AI Raspberry 5 Cluster",
+      "description": "Cluster using Raspberry Pi 5 with Google Coral TPU hats, providing 8 TOPS per hat for small to medium-scale AI models and server deployment.",
+      "highlights": [
+        "Assembled AI cluster with Raspberry Pi 5 and Google TPU hat",
+        "Configured Raspberry Pi 5 to access TPU hat",
+        "Deployed Docker K3 cluster management tool",
+        "Deployed Google computer vision model on AI cluster"
+      ],
+      "technologies": [
+        "Raspberry Pi 5",
+        "Google Coral TPU",
+        "Docker",
+        "K3s",
+        "Computer Vision Models",
+        "Linux"
+      ],
+      "links": {
+        "learnMore": "./assests/projects/rpi/"
+      },
+      "image": "./assests/project4.png"
+    },
+    {
+      "title": "Device Upchecker and Alerting System",
+      "description": "Monitors the status and availability of devices, computers, and services at UNT IT department, ensuring high availability and reduced downtime.",
+      "highlights": [
+        "Enhanced high availability and support",
+        "Reduced downtime to 10 minutes",
+        "Developed full-stack application",
+        "Implemented mail-based alerting service"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "Email Alerts",
+        "SSH",
+        "Full-stack Monitoring"
+      ],
+      "links": {
+        "learnMore": "https://github.com/imageless-innovations"
+      },
+      "image": "./assests/project2.png"
+    },
+    {
+      "title": "GO ML Desktop Application",
+      "description": "Desktop application for students to practice machine learning algorithms without coding, supporting classification, regression, and clustering.",
+      "highlights": [
+        "Created no-code ML practice platform",
+        "Developed custom Brain Module for ML",
+        "Helped students practice ML with an easy-to-use UI",
+        "Implemented ML algorithms from scratch"
+      ],
+      "technologies": [
+        "Python",
+        "Tkinter",
+        "Machine Learning",
+        "No-code Platform",
+        "Classification",
+        "Regression",
+        "Clustering"
+      ],
+      "links": {
+        "learnMore": "https://github.com/shivamjadhav2000/MLSOFTWARE"
+      },
+      "image": "./assests/project3.png"
+    }
+  ],
+  "experiences": [
+    {
+      "role": "Software Development Engineer - Intern",
+      "company": "ISN Software Corporation",
+      "location": "Dallas, United States",
+      "startDate": "June 2025",
+      "endDate": "Present",
+      "duration": null,
+      "summary": [
+        "Resolved critical SQL performance issues in the Notification Framework within two weeks of onboarding, improving system efficiency for 85K+ contractors and 850 enterprise clients.",
+        "Architected and delivered a real-time Health Check system used by TechOps to monitor service uptime, ensuring high availability and reliability of ISN’s core platforms.",
+        "Designed Azure-hosted SQL Server databases, defined schemas, and implemented backend APIs supporting system-wide observability.",
+        "Built full-stack features using .NET Web API, React, and Razor Pages to visualize health metrics and resource states.",
+        "Achieved AZ-900 certification and led cross-team API integration efforts within the first month, demonstrating rapid adaptability and secure DevOps alignment."
+      ],
+      "technologies": [
+        "C#",
+        ".NET Web API",
+        "React.js",
+        "Razor Pages",
+        "Azure",
+        "SQL Server"
+      ]
+    },
+    {
+      "role": "IT Specialist - Student Assistant",
+      "company": "University of North Texas",
+      "location": "Denton, United States",
+      "startDate": "Sept 2023",
+      "endDate": "May 2025",
+      "duration": "1.5 Years",
+      "summary": [
+        "Led the deployment of digital signage solutions, ensuring smooth implementation and management university-wide.",
+        "Collaborated on full-stack development for seamless integration of university systems.",
+        "Managed cloud infrastructure and containerized applications using Docker and cloud services.",
+        "Performed server imaging, RAID setup (1, 5), SSH management, and CUDA driver installation.",
+        "Handled complete server rack management for AI research projects at CVAD UNT."
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Docker",
+        "Ubuntu",
+        "RAID 1/5",
+        "CUDA"
+      ]
+    },
+    {
+      "role": "Full Stack Engineer",
+      "company": "Cyrrup Solutions",
+      "location": "Hyderabad, India",
+      "startDate": "Mar 2021",
+      "endDate": "Aug 2023",
+      "duration": "2.5 years",
+      "summary": [
+        "Developed fleet management and AI solutions using Vue.js, Node.js, Express.js, Redis, Python, AWS, and GCP.",
+        "Ensured project scalability and maintained high standards on Google Cloud Platform.",
+        "Built complete web applications with Vue.js frontend and Node.js/Express backend.",
+        "Implemented efficient deployment strategies for high-quality production delivery.",
+        "Configured and deployed web servers using Nginx.",
+        "Managed cloud integration on Linux servers using GCP IAAS and PAAS services.",
+        "Developed and managed backend services with a focus on performance optimization.",
+        "Implemented networking services using WebSockets.io for real-time communication.",
+        "Worked collaboratively with cross-functional teams to deliver high-quality products within deadlines."
+      ],
+      "technologies": [
+        "Vue.js",
+        "Node.js",
+        "Express.js",
+        "Redis",
+        "Python",
+        "AWS",
+        "GCP",
+        "Nginx",
+        "Linux",
+        "WebSockets.io"
+      ]
+    },
+    {
+      "role": "Software Development Engineer",
+      "company": "Freelancer / Self Employed",
+      "location": "Hyderabad, India",
+      "startDate": "Feb 2019",
+      "endDate": "Present",
+      "duration": "5+ Years",
+      "summary": [
+        "Falbum: A Photo Sharing and Storage Solution – Led development, designed features including album creation, media sharing, cloud storage, and built microservices with Node.js, Express, MongoDB. Frontend and cloud integration using React, GCP, Google Cloud Buckets, Firebase.",
+        "SMART AI RING: Soncur.in startup – Built admin dashboard, backend APIs, AI model API, database schemas, deployed full tech stack on AWS (EC2, S3, IAM, Route 53, SageMaker, API Gateway, Lambda)."
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "GCP",
+        "Firebase",
+        "AWS",
+        "SageMaker",
+        "Lambda",
+        "API Gateway"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend Development",
+      "image": "./assests/skills/frontend.jpeg",
+      "skills": [
+        { "name": "HTML", "level": 80 },
+        { "name": "CSS", "level": 80 },
+        { "name": "JavaScript", "level": 100 },
+        { "name": "React", "level": 80 },
+        { "name": "Vue Js", "level": 60 }
+      ]
+    },
+    {
+      "category": "Backend Development",
+      "image": "./assests/skills/backend.jpeg",
+      "skills": [
+        { "name": "Node.js", "level": 100 },
+        { "name": "Express.js", "level": 100 },
+        { "name": "MongoDB", "level": 60 },
+        { "name": "Redis", "level": 100 },
+        { "name": "Python", "level": 100 }
+      ]
+    },
+    {
+      "category": "Cloud Technologies",
+      "image": "./assests/skills/cloud.jpeg",
+      "skills": [
+        { "name": "Azure", "level": 80 },
+        { "name": "AWS", "level": 100 },
+        { "name": "Docker", "level": 60 },
+        { "name": "Nginx", "level": 80 }
+      ]
+    },
+    {
+      "category": "AI & Machine Learning",
+      "image": "./assests/skills/ai.jpeg",
+      "skills": [
+        { "name": "Machine Learning", "level": 80 },
+        { "name": "Large Language Model", "level": 80 },
+        { "name": "Deep Learning", "level": 60 },
+        { "name": "AI Model Training", "level": 100 }
+      ]
+    },
+    {
+      "category": "DevOps & Deployment",
+      "image": "./assests/skills/devops.jpeg",
+      "skills": [
+        { "name": "Docker", "level": 60 },
+        { "name": "Nginx", "level": 60 },
+        { "name": "Linux", "level": 80 },
+        { "name": "PM2", "level": 100 }
+      ]
+    },
+    {
+      "category": "Networking",
+      "image": "./assests/skills/networking.jpeg",
+      "skills": [{ "name": "WebSockets Server", "level": 80 }]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Meta Front-End Developer",
+      "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/DC89LIS25E36",
+      "skills": [
+        "Algorithms",
+        "Cascading Style Sheets (CSS)",
+        "Web Development",
+        "React",
+        "HTML",
+        "User Experience",
+        "HTML and CSS",
+        "JavaScript",
+        "UI/UX design"
+      ],
+      "info": "I learned to build responsive web applications using HTML, CSS, and JavaScript. I gained proficiency in React for front-end development and mastered UI/UX design principles. I developed skills in version control with Git and GitHub, and learned to create user-friendly interfaces.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "2025-05-4",
+      "certificateLink": "assests/certificates/frontendDevMeta.png"
+    },
+    {
+      "title": "Advanced React",
+      "link": "https://www.coursera.org/account/accomplishments/verify/D4CIA78VXQDW",
+      "skills": [
+        "Unit Testing",
+        "React (Web Framework)",
+        "Front-End Web Development"
+      ],
+      "info": "Developed advanced React component skills: Learned to create robust, reusable components using advanced techniques and design patterns.Mastered API interaction: Gained proficiency in fetching and posting data from remote servers via APIs.Enhanced testing capabilities: Became adept at testing React applications using React Testing Library.Improved development efficiency: Learned to integrate commonly used React libraries to streamline application development.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "2025-03-18",
+      "certificateLink": "assests/certificates/advancedReact.png"
+    },
+    {
+      "title": "HTML and CSS in depth",
+      "link": "https://www.coursera.org/account/accomplishments/records/6TLAKF4LZ17D",
+      "skills": [
+        "HTML and CSS",
+        "React (Web Framework)",
+        "Debugging",
+        "JavaScript",
+        "User Interface"
+      ],
+      "info": "During this learning experience, I focused on building practical web development skills, including the creation of responsive forms and layouts using HTML5 and CSS, mastering the implementation of user interfaces with the Bootstrap framework, and developing proficiency in utilizing debugging tools. These skills collectively enhance my ability to design and build efficient, user-friendly web applications across various devices.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "2025-03-2",
+      "certificateLink": "assests/certificates/HTMLANDCSS.png"
+    },
+    {
+      "title": "Version Control",
+      "link": "https://www.coursera.org/account/accomplishments/verify/A2SPC9CBBNN5",
+      "skills": [
+        "Version Control",
+        "Github",
+        "Bash (Unix Shell)",
+        "Web Development",
+        "Linux"
+      ],
+      "info": "i have learned about version control, Distributed , Centralised Version control system, resolve conflicts, git workflow, understand between staging , production and git cli,bash, cli.",
+      "company": "assests/certificates/meta.png",
+      "category": "software development",
+      "date": "2025-03-18",
+      "certificateLink": "assests/certificates/versionControl.png"
+    },
+    {
+      "title": "Tools of the Trade: Linux and SQL",
+      "link": "https://www.coursera.org/account/accomplishments/verify/D4CIA78VXQDW",
+      "skills": ["Command Line Interface (CLI)", "SQL", "Linux", "Bash"],
+      "info": "Gained OS understanding and CLI proficiency.Mastered Linux commands and SQL queries.Developed skills in system interaction and data retrieval.",
+      "company": "assests/certificates/google.png",
+      "category": "Database",
+      "date": "2025-01-28",
+      "certificateLink": "assests/certificates/linuxAndSql.png"
+    },
+    {
+      "title": "Programming with JavaScript",
+      "link": "https://www.coursera.org/account/accomplishments/verify/R46XJBRKKJCD",
+      "skills": [
+        "Test-Driven Development",
+        "JavaScript",
+        "Front-End Web Development",
+        "Object-Oriented Programming (OOP)"
+      ],
+      "info": "I learned basic JavaScript coding. I developed skills in object and array handling. I gained proficiency in unit testing with Jest.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "2024-11-22",
+      "certificateLink": "assests/certificates/programmingWIthJavascript.png"
+    },
+    {
+      "title": "Introduction to Front-End Development",
+      "link": "https://coursera.org/share/ae9ac11424dca5515ebaba30a2db0c55",
+      "skills": [
+        "Web Development Tools",
+        "HTML and CSS",
+        "Responsive Web Design",
+        "Front-End Web Development",
+        "User Interface"
+      ],
+      "info": "I learned the roles of front-end, back-end, and full-stack developers. I gained skills in creating and styling web pages with HTML and CSS. I understood the benefits of UI frameworks.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "September 11, 2024",
+      "certificateLink": "assests/certificates/IntroToFrontEnd.png"
+    },
+    {
+      "title": "Introduction to Back-End Development",
+      "link": "https://coursera.org/share/ae9ac11424dca5515ebaba30a2db0c55",
+      "skills": [
+        "Web Development Tools",
+        "HTML and CSS",
+        "Responsive Web Design",
+        "Front-End Web Development",
+        "User Interface"
+      ],
+      "info": "I learned the roles of front-end, back-end, and full-stack developers. I gained skills in creating and styling web pages with HTML and CSS. I understood the benefits of UI frameworks.",
+      "company": "assests/certificates/meta.png",
+      "category": "Front-End",
+      "date": "September 11, 2024",
+      "certificateLink": "assests/certificates/IntroToBackend.png"
+    },
+
+    {
+      "title": "Docker For Developers",
+      "link": "https://www.linkedin.com/learning/certificates/ed9fc1e68d5e8bc69e092a5360bc9ef679b1d1da5dbf120bb783cbe8475d8b9f",
+      "skills": [
+        "Docker",
+        "Containerization",
+        "DevOps",
+        "Software Development",
+        "Web Development"
+      ],
+      "info": " I learned to create and manage containers, build images, and deploy applications with Docker. I gained proficiency in containerization and deployment processes, enhancing my ability to streamline software development and deployment.",
+      "company": "assests/certificates/linkedin.png",
+      "category": "Front-End",
+      "date": "Jun 19, 2024",
+      "certificateLink": "assests/certificates/dockerForDev.png"
+    },
+    {
+      "title": "AWS Certified Cloud Practitioner",
+      "link": "https://www.udemy.com/certificate/UC-9691512f-e086-4a8d-aaa4-e54f433052d6/",
+      "skills": ["AWS", "Cloud Computing", "EC2", "S3", "RDS"],
+      "info": "I learned the fundamentals of cloud computing and AWS. I gained proficiency in using AWS services, including EC2, S3, and RDS. I developed skills in cloud security and cost management.",
+      "company": "assests/certificates/award.png",
+      "category": "Cloud Computing",
+      "date": "Mar 11, 2023",
+      "certificateLink": "assests/certificates/AWSCloudPrac.png"
+    },
+    {
+      "title": "Google Cloud Fundamentals: Core Infrastructure",
+      "link": "https://coursera.org/share/d81c3cc21fd742163d2a2628379dbfb9",
+      "skills": [
+        "Google Compute Engine",
+        "Google App Engine (GAE)",
+        "Google Cloud Platform",
+        "Cloud Computing"
+      ],
+      "info": "I identified the purpose of Google Cloud products, defined infrastructure organization, and explained basic infrastructure creation. I learned to select and use Google Cloud storage options.",
+      "company": "assests/certificates/google.png",
+      "category": "Cloud Computing",
+      "date": "july 04, 2021",
+      "certificateLink": "assests/certificates/GCP.png"
+    },
+    {
+      "title": "Deep Learning Specialization",
+      "link": "https://coursera.org/share/af8c97ec9d72cb6f17c62ac59969ac19",
+      "skills": [
+        "Recurrent Neural Network",
+        "Tensorflow",
+        "Convolutional Neural Network",
+        "Artificial Neural Network",
+        "Transformers"
+      ],
+      "info": "I built and trained deep neural networks, mastered key architecture parameters, and implemented vectorized neural networks. I learned to train test sets, analyze variance, use optimization algorithms, and build networks in TensorFlow. I built CNNs for detection and recognition, used neural style transfer, and worked with RNNs, NLP, and transformer models.",
+      "category": "Machine Learning",
+      "company": "assests/certificates/award.png",
+      "date": "october 21, 2020",
+      "certificateLink": "assests/certificates/deeplearning.png"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Do You Know How to Test Your Code? Let's Jest Together",
+      "date": "December 26, 2024",
+      "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3ky8R0LKsU03FvWkqOFA8A.png",
+      "description": "Walkthrough of using Jest for unit, integration, and mock testing in JavaScript.",
+      "link": "https://medium.com/@jadhavshivam0228/do-you-know-how-to-test-your-code-lets-jest-together-74269d5712a1"
+    },
+    {
+      "title": "Building a Serverless Full-Stack App: Harnessing React and AWS Lambda and more.",
+      "date": "May 26, 2024",
+      "image": "./assests/blogs/image1.png",
+      "description": "Tutorial for building a full-stack app using React, AWS Lambda, API Gateway, DynamoDB, IAM, and S3.",
+      "link": "https://medium.com/@jadhavshivam0228/building-a-serverless-full-stack-app-harnessing-react-and-aws-lambda-and-more-2a086f101afa"
+    },
+    {
+      "title": "Understanding Browser Storage: LocalStorage, SessionStorage, and IndexedDB",
+      "date": "May 19, 2024",
+      "image": "./assests/blogs/image2.png",
+      "description": "Explains client-side storage options and how browsers use LocalStorage, SessionStorage, and IndexedDB.",
+      "link": "https://medium.com/@jadhavshivam0228/understanding-browser-storage-localstorage-sessionstorage-and-indexeddb-43ddfcdd2b12"
+    },
+    {
+      "title": "Comprehensive Guide to Nginx Installation, Configuration, and DNS Binding",
+      "date": "Feb 7, 2023",
+      "image": "./assests/blogs/image3.png",
+      "description": "Guide for Nginx web server setup, reverse proxying, load balancing, and server-side configurations.",
+      "link": "https://medium.com/@jadhavshivam0228/comprehensive-guide-to-nginx-installation-configuration-and-dns-binding-23d2fb40845e"
+    },
+    {
+      "title": "RAID Configurations on Dell R740 | RAID 1, RAID 5 & Hot Spare Explained",
+      "date": "Dec 26, 2022",
+      "image": "./assests/RAIDsetup.png",
+      "description": "Tutorial on RAID setup on Dell PowerEdge R740 servers, covering RAID 1, RAID 5, and Hot Spare options.",
+      "link": "https://www.youtube.com/watch?v=-RiUdptd0Wc"
+    }
+  ]
+}
