@@ -228,12 +228,39 @@
   ],
   "experiences": [
     {
+      "role":"AI Trainer -Contract",
+      "company":"Handshake",
+      "location":"Remote, United States",
+      "startDate":"Sept 2025",
+      "endDate": "Present",
+      "duration": null,
+      "summary": [
+        "Reviewed and annotated AI-generated outputs to improve large language model (LLM) accuracy and relevance.",
+        "Curated and validated datasets while adapting to evolving task guidelines and project needs.",
+        "Collaborated with technical teams to refine annotation tools and workflows for higher data quality.",
+        "Applied strong analytical and domain expertise to ensure consistency, accuracy, and clarity in training data."
+      ],
+      "technologies": [
+        "AI",
+        "Machine Learning",
+        "Data Annotation",
+        "NLP",
+        "LLM",
+        "STEM",
+        "DATA Structures",
+        "Algorithms",
+        "Graph Theory"
+
+      ]
+
+    },
+    {
       "role": "Software Development Engineer - Intern",
       "company": "ISN Software Corporation",
       "location": "Dallas, United States",
       "startDate": "June 2025",
-      "endDate": "Present",
-      "duration": null,
+      "endDate": "Aug 2025",
+      "duration": "3 months",
       "summary": [
         "Resolved critical SQL performance issues in the Notification Framework within two weeks of onboarding, improving system efficiency for 85K+ contractors and 850 enterprise clients.",
         "Architected and delivered a real-time Health Check system used by TechOps to monitor service uptime, ensuring high availability and reliability of ISN’s core platforms.",
