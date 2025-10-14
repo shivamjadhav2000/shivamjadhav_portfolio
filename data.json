@@ -228,12 +228,37 @@
   ],
   "experiences": [
     {
+      "role":"Software Engineer- AI Trainer Consultant",
+      "company":"University of North Texas",
+      "location":"Denton,Texas, United States",
+      "startDate":"Sept 2025",
+      "endDate": "Present",
+      "duration": null,
+      "summary":["Architecting cloud-native full-stack systems using Java, React.js, spring boot,, SQL, and Azure to improve campus technology infrastructure and reliability.",
+      "Developed a Digital Signage Management System with RESTful APIs and microservices deployed on Docker and Kubernetes, saving $40K annually.",
+"Implemented real-time monitoring and system status dashboards using WebSockets, TCP sockets, and server-side logic for 24/7 uptime tracking."
+],
+"technologies": [
+        "Java",
+        "Spring Boot",
+        "React.js",
+        "Node.js",
+        "Docker",
+        "Kubernetes",
+        "Azure",
+        "Jenkins",
+        "SQL",
+        "WebSockets",
+        "TCP Sockets"
+      ]
+    },
+    {
       "role":"AI Trainer -Contract",
       "company":"Handshake",
       "location":"Remote, United States",
       "startDate":"Sept 2025",
-      "endDate": "Present",
-      "duration": null,
+      "endDate": "Oct 2025",
+      "duration": "2 months",
       "summary": [
         "Reviewed and annotated AI-generated outputs to improve large language model (LLM) accuracy and relevance.",
         "Curated and validated datasets while adapting to evolving task guidelines and project needs.",
