@@ -303,7 +303,7 @@
       ]
     },
     {
-      "role": "IT Specialist - Student Assistant",
+      "role": "Senior Software Engineer - Student Assistant",
       "company": "University of North Texas",
       "location": "Denton, United States",
       "startDate": "Sept 2023",
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "role": "Full Stack Engineer",
+      "role": "Full Stack Engineer Lead",
       "company": "Cyrrup Solutions",
       "location": "Hyderabad, India",
       "startDate": "Mar 2021",
@@ -389,10 +389,11 @@
         { "name": "HTML", "level": 100 },
         { "name": "CSS", "level": 100 },
         { "name": "JavaScript", "level": 100 },
-        { "name": "C#", "level": 80 },
+        {"name": "TypeScript", "level": 100},
         { "name": "Dot Net", "level": 100 },
-        { "name": "React", "level": 80 },
-        { "name": "Vue Js", "level": 70 }
+        { "name": "React", "level": 100 },
+        { "name": "C#", "level": 80 },
+        { "name": "Vue Js", "level":90 }
       ]
     },
     {
@@ -400,9 +401,11 @@
       "image": "./assests/skills/backend.jpeg",
       "skills": [
         { "name": "Node.js", "level": 100 },
+        {"name":"Java", "level":100},
+        {"name":"Spring Boot", "level":100},
         { "name": "Express.js", "level": 100 },
         { "name": "MongoDB", "level": 100 },
-        { "name": "SQL", "level": 80 },
+        { "name": "SQL", "level": 100 },
 
         { "name": "Redis", "level": 100 },
         { "name": "Python", "level": 100 }
@@ -412,27 +415,28 @@
       "category": "Cloud Technologies",
       "image": "./assests/skills/cloud.jpeg",
       "skills": [
-        { "name": "Azure", "level": 80 },
         { "name": "AWS", "level": 100 },
-        { "name": "Docker", "level": 90 },
-        { "name": "Nginx", "level": 80 }
+        { "name": "Azure", "level": 80 },
+        { "name": "GCP", "level": 80 },
+        { "name": "Docker", "level": 100 },
+        { "name": "Nginx", "level": 100 }
       ]
     },
     {
       "category": "AI & Machine Learning",
       "image": "./assests/skills/ai.jpeg",
       "skills": [
-        { "name": "Machine Learning", "level": 90 },
-        { "name": "Large Language Model", "level": 80 },
+        { "name": "Machine Learning", "level": 100 },
         { "name": "Deep Learning", "level": 100 },
-        { "name": "AI Model Training", "level": 100 }
+        { "name": "AI Model Training", "level": 100 },
+        { "name": "Large Language Model", "level": 90 }
       ]
     },
     {
       "category": "DevOps & Deployment",
       "image": "./assests/skills/devops.jpeg",
       "skills": [
-        { "name": "Docker", "level": 80 },
+        { "name": "Docker", "level": 100 },
         { "name": "Nginx", "level": 100 },
         { "name": "Linux", "level": 100 },
         { "name": "PM2", "level": 100 }
@@ -441,10 +445,20 @@
     {
       "category": "Networking",
       "image": "./assests/skills/networking.jpeg",
-      "skills": [{ "name": "WebSockets Server", "level": 80 }]
+      "skills": [{ "name": "WebSockets Server", "level": 100 }]
     }
   ],
   "certifications": [
+    {
+      "title":"Ultimate AWS Certified Solutions Architect Associate 2025",
+      "link":"https://www.udemy.com/certificate/UC-9f35e893-9bb0-4ee1-ab71-4edc9b80001d/",
+      "skills":["AWS","Cloud Computing","EC2","S3","RDS"],
+      "info":"I mastered AWS services and architecture, including EC2, S3, RDS, VPC, IAM, Lambda, CloudFormation, and more. I developed skills in designing scalable, secure cloud solutions and cost optimization strategies.",
+      "company":"assests/certificates/award.png",
+      "category":"Cloud",
+      "date":"2025-09-02",
+      "certificateLink":"assests/certificates/AWS.png"
+    },
     {
     "title": "Microsoft Certified: Azure Fundamentals",
     "link": "https://learn.microsoft.com/api/credentials/share/en-us/ShivamJadhav-6544/37771034E92E5FCB?sharingId=26D17318C46AA963",
@@ -645,6 +659,16 @@
     }
   ],
   "blogs": [
+    {
+    "title": "Is Your Payload Truly Protected?",
+    "date": "Nov 10, 2025",
+    "image": "./assests/blogs/blog5.png",
+    "description": "An in-depth exploration of API payload security, covering encryption, hashing, JWT, and real-world best practices to safeguard sensitive data in modern applications.",
+    "link": "https://medium.com/@jadhavshivam0228/is-your-payload-truly-protected-ae67dbe2711e",
+    "category": "Security",
+    "author": "Shivam Jadhav",
+    "tags": ["Security", "Encryption", "JWT", "API", "AES", "RSA", "Data Protection", "Cybersecurity", "Best Practices"]
+  },
     {
     "title": "From Simple Web App to Enterprise-Ready: A Step-by-Step AWS Architecture Journey",
     "date": "Aug 23, 2025",
