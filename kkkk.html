@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Multi UI</title>
+  <!-- Tailwind CDN (for quick prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small helper for badge drop shadows */
+    .skill-badge { box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
+    .pill-icon { width:36px; height:36px; border-radius:8px; object-fit:cover; }
+    /* accessible focus outline for interactive tabs */
+    .tab:focus { outline: 3px solid rgba(59,130,246,0.35); outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <main class="max-w-6xl mx-auto p-6">
+    <header class="mb-6">
+      <h1 class="text-3xl font-extrabold">Top Skills — multiple presentations</h1>
+      <p class="text-sm text-gray-500 mt-1">Showing only top 20 skills — premium portfolio friendly.</p>
+    </header>
+
+    <!-- Tabs -->
+    <div class="mb-6 flex gap-2">
+      <button class="tab px-4 py-2 rounded-lg bg-white shadow-sm text-sm font-medium" data-mode="pillars">Skill Pillars</button>
+      <button class="tab px-4 py-2 rounded-lg bg-white shadow-sm text-sm font-medium" data-mode="matrix">Skill Matrix</button>
+      <button class="tab px-4 py-2 rounded-lg bg-white shadow-sm text-sm font-medium" data-mode="badges">Skill Badges</button>
+      <button class="tab px-4 py-2 rounded-lg bg-white shadow-sm text-sm font-medium" data-mode="hybrid">Hybrid</button>
+      <div class="ml-auto flex items-center gap-3">
+        <span class="text-xs text-gray-500">Display:</span>
+        <select id="level-mode" class="bg-white border rounded px-2 py-1 text-sm">
+          <option value="percent">Percent + Level</option>
+          <option value="level-only">Level Only (Expert/Advanced)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Container for UIs -->
+    <section id="skills-root" class="grid gap-6"></section>
+
+    <footer class="mt-6 text-xs text-gray-500">
+      Tip: Edit the <code>TOP_SKILLS</code> array in the script to reorder or adjust skills/cert names.
+    </footer>
+  </main>
+
+  <script>
+  /**************************************************************************
+   * TOP SKILLS JSON (Top 20)
+   * Edit here if you want to change names, category or level.
+   *
+   * Fields:
+   *  - name (string)
+   *  - category (string) -> used in Pillars/Hybrid grouping
+   *  - levelPercent (number 0-100) -> used for subtle bars
+   *  - level (string) -> "Expert"|"Advanced"|"Intermediate"
+   *  - note (optional) -> e.g. certification info
+   **************************************************************************/
+  const TOP_SKILLS = [
+    { name: "React", category: "Frontend", levelPercent: 95, level: "Expert" },
+    { name: "TypeScript", category: "Frontend", levelPercent: 92, level: "Expert" },
+    { name: "JavaScript (ES6+)", category: "Frontend", levelPercent: 98, level: "Expert" },
+    { name: "HTML & CSS", category: "Frontend", levelPercent: 98, level: "Expert" },
+
+    { name: "Node.js", category: "Backend", levelPercent: 95, level: "Expert" },
+    { name: "Express.js", category: "Backend", levelPercent: 92, level: "Expert" },
+    { name: "Java", category: "Backend", levelPercent: 90, level: "Expert" },
+    { name: "Spring Boot", category: "Backend", levelPercent: 90, level: "Expert" },
+
+    { name: "MongoDB", category: "Databases", levelPercent: 92, level: "Expert" },
+    { name: "SQL (Postgres / MySQL)", category: "Databases", levelPercent: 90, level: "Advanced" },
+    { name: "Redis", category: "Databases", levelPercent: 88, level: "Advanced" },
+
+    { name: "AWS (Certified)", category: "Cloud", levelPercent: 95, level: "Expert", note: "Certified" },
+    { name: "AWS Solutions Architect – Associate", category: "Cloud", levelPercent: 95, level: "Expert", note: "SAA" },
+    { name: "Azure (Certified)", category: "Cloud", levelPercent: 88, level: "Advanced", note: "AZ-xxx" },
+
+    { name: "Docker", category: "DevOps", levelPercent: 94, level: "Expert" },
+    { name: "Jenkins", category: "DevOps", levelPercent: 90, level: "Advanced" },
+    { name: "CI/CD (Pipelines)", category: "DevOps", levelPercent: 93, level: "Expert" },
+
+    { name: "RAG (Retrieval-Augmented Generation)", category: "AI", levelPercent: 88, level: "Advanced" },
+    { name: "LLMs / GenAI Integration", category: "AI", levelPercent: 90, level: "Advanced" },
+    { name: "Python (ML tooling)", category: "AI", levelPercent: 87, level: "Advanced" }
+  ];
+
+  /**************************************************************************
+   * Helpers
+   **************************************************************************/
+  const groupBy = (arr, keyFn) => {
+    return arr.reduce((acc, item) => {
+      const key = keyFn(item);
+      (acc[key] ??= []).push(item);
+      return acc;
+    }, {});
+  };
+
+  // clamp to top 20 (already top 20) but keep slice for safety
+  const topList = TOP_SKILLS.slice(0, 20);
+
+  /**************************************************************************
+   * Renderers
+   **************************************************************************/
+
+  // 1) Skill Pillars: group into 4-6 pillars (by category)
+  function renderPillars(container, items) {
+    container.innerHTML = "";
+    const groups = groupBy(items, s => s.category);
+    const grid = document.createElement("div");
+    grid.className = "grid gap-4 sm:grid-cols-2 lg:grid-cols-3";
+    Object.entries(groups).forEach(([category, skills]) => {
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl p-5 shadow-md border border-gray-100";
+      card.innerHTML = `
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
+            <strong class="text-sm text-indigo-600">${category[0]}</strong>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">${category}</h3>
+            <p class="text-xs text-gray-500">Core expertise & representative skills</p>
+          </div>
+        </div>
+      `;
+
+      const list = document.createElement("ul");
+      list.className = "space-y-3 mt-3";
+
+      skills.forEach(s => {
+        const li = document.createElement("li");
+        li.className = "flex items-center justify-between gap-4";
+        li.innerHTML = `
+          <div>
+            <div class="text-sm font-medium">${s.name}</div>
+            <div class="text-xs text-gray-400">${s.level}</div>
+          </div>
+          <div class="text-xs text-blue-600 font-semibold">${s.note ?? ""}</div>
+        `;
+        list.appendChild(li);
+      });
+
+      card.appendChild(list);
+      grid.appendChild(card);
+    });
+
+    container.appendChild(grid);
+  }
+
+  // 2) Skill Matrix Grid (icon + level + subtle percent bar)
+  function renderMatrix(container, items) {
+    container.innerHTML = "";
+    const grid = document.createElement("div");
+    grid.className = "bg-white rounded-xl p-4 shadow-sm border border-gray-100";
+    grid.innerHTML = `
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-semibold">Skill Matrix (Top 20)</h3>
+        <p class="text-xs text-gray-500">Expert / Advanced / Intermediate</p>
+      </div>
+    `;
+    const table = document.createElement("div");
+    table.className = "grid gap-3 sm:grid-cols-2 lg:grid-cols-3";
+    items.forEach(s => {
+      const card = document.createElement("div");
+      card.className = "p-3 rounded-lg border border-gray-100";
+      card.innerHTML = `
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <div class="text-sm font-medium">${s.name}</div>
+            <div class="text-xs text-gray-400">${s.category}</div>
+          </div>
+          <div class="text-xs font-semibold">${s.level}</div>
+        </div>
+        <div class="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
+          <div class="h-2.5 rounded-full" style="width: ${s.levelPercent}%; background: linear-gradient(90deg,#3b82f6,#1e40af);"></div>
+        </div>
+        <div class="mt-2 text-xs text-gray-400">Confidence: ${s.levelPercent}%</div>
+      `;
+      table.appendChild(card);
+    });
+    grid.appendChild(table);
+    container.appendChild(grid);
+  }
+
+  // 3) Skill Badges (colorful, grouped)
+  function renderBadges(container, items) {
+    container.innerHTML = "";
+    const groups = groupBy(items, s => s.category);
+    const wrapper = document.createElement("div");
+    wrapper.className = "space-y-6";
+
+    Object.entries(groups).forEach(([category, skills]) => {
+      const section = document.createElement("div");
+      section.className = "bg-white rounded-xl p-4 shadow-sm border border-gray-100";
+      section.innerHTML = `
+        <div class="flex items-center justify-between mb-3">
+          <h4 class="font-semibold">${category}</h4>
+          <div class="text-xs text-gray-400">${skills.length} top skills</div>
+        </div>
+      `;
+      const badges = document.createElement("div");
+      badges.className = "flex flex-wrap gap-3";
+
+      skills.forEach(s => {
+        const b = document.createElement("div");
+        b.className = "skill-badge px-3 py-2 rounded-full text-sm flex items-center gap-2";
+        b.style.minWidth = "120px";
+        b.style.background = "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)";
+        b.innerHTML = `
+          <div class="text-sm font-semibold">${s.name}</div>
+          <div class="ml-auto text-xs text-gray-500">${s.level}</div>
+        `;
+        badges.appendChild(b);
+      });
+
+      section.appendChild(badges);
+      wrapper.appendChild(section);
+    });
+
+    container.appendChild(wrapper);
+  }
+
+  // 4) Hybrid: Pillars + badges + small icons and notes
+  function renderHybrid(container, items) {
+    container.innerHTML = "";
+    const groups = groupBy(items, s => s.category);
+    const wrapper = document.createElement("div");
+    wrapper.className = "grid gap-6 lg:grid-cols-2";
+
+    // Left: pillars (cards)
+    const left = document.createElement("div");
+    left.className = "space-y-4";
+
+    Object.entries(groups).forEach(([cat, skills]) => {
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl p-4 shadow-sm border border-gray-100";
+      card.innerHTML = `
+        <div class="flex items-center gap-3 mb-2">
+          <img class="pill-icon" src="" alt="" onerror="this.style.display='none'">
+          <div>
+            <h4 class="font-semibold">${cat}</h4>
+            <div class="text-xs text-gray-400">${skills.length} top skills</div>
+          </div>
+        </div>
+      `;
+      const list = document.createElement("div");
+      list.className = "grid gap-2";
+
+      skills.forEach(s => {
+        const row = document.createElement("div");
+        row.className = "flex items-center justify-between gap-3";
+        row.innerHTML = `
+          <div>
+            <div class="text-sm font-medium">${s.name}</div>
+            <div class="text-xs text-gray-400">${s.level}</div>
+          </div>
+          <div class="text-xs text-indigo-600 font-semibold">${s.note ?? ""}</div>
+        `;
+        list.appendChild(row);
+      });
+
+      card.appendChild(list);
+      left.appendChild(card);
+    });
+
+    // Right: badge cloud for quick scan
+    const right = document.createElement("div");
+    right.className = "bg-white rounded-xl p-4 shadow-sm border border-gray-100";
+    const cloudTitle = document.createElement("h4");
+    cloudTitle.className = "font-semibold mb-3";
+    cloudTitle.textContent = "Quick Scan";
+    right.appendChild(cloudTitle);
+
+    const cloud = document.createElement("div");
+    cloud.className = "flex flex-wrap gap-3 items-center";
+
+    items.forEach(s => {
+      const sb = document.createElement("div");
+      sb.className = "px-3 py-2 rounded-lg border border-gray-100 text-sm flex items-center gap-3";
+      sb.style.minWidth = "140px";
+      sb.innerHTML = `
+        <div class="text-sm font-medium">${s.name}</div>
+        <div class="ml-auto text-xs text-gray-500">${s.level}</div>
+      `;
+      cloud.appendChild(sb);
+    });
+
+    right.appendChild(cloud);
+
+    wrapper.appendChild(left);
+    wrapper.appendChild(right);
+    container.appendChild(wrapper);
+  }
+
+  /**************************************************************************
+   * UI: Tab handling and initial render
+   **************************************************************************/
+  const root = document.getElementById("skills-root");
+
+  // initial mode
+  let currentMode = "pillars";
+
+  function renderMode(mode) {
+    root.innerHTML = "";
+    const container = document.createElement("div");
+    container.id = "skills-container";
+    root.appendChild(container);
+
+    // pick the top 20 list (clamped)
+    const items = topList;
+
+    if (mode === "pillars") renderPillars(container, items);
+    else if (mode === "matrix") renderMatrix(container, items);
+    else if (mode === "badges") renderBadges(container, items);
+    else if (mode === "hybrid") renderHybrid(container, items);
+  }
+
+  // attach tab handlers
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      document.querySelectorAll(".tab").forEach(b => b.classList.remove("ring-2","ring-indigo-300"));
+      btn.classList.add("ring-2","ring-indigo-300");
+      currentMode = btn.getAttribute("data-mode");
+      renderMode(currentMode);
+    });
+  });
+
+  // level-mode select (affects text labels) -> simple demo: changes label text in matrix
+  document.getElementById("level-mode").addEventListener("change", (e) => {
+    // very small demo: if "level-only" then show only level text; if percent, show percent
+    // We'll re-render currentMode so matrix picks up data from TOP_SKILLS percent/level fields
+    renderMode(currentMode);
+  });
+
+  // initial render
+  // set first tab active
+  const firstTab = document.querySelector(".tab[data-mode='pillars']");
+  if (firstTab) firstTab.classList.add("ring-2","ring-indigo-300");
+  renderMode(currentMode);
+
+  </script>
+</body>
+</html>

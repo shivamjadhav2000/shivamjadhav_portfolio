@@ -1,4 +1,28 @@
 [
+    {
+    "title": "AWS Certified Solutions Architect – Associate",
+    "link": "https://www.credly.com/badges/8c3cacef-b57e-45ad-aa48-742d9886cde9/public_url",
+    "skills": [
+        "AWS Architecture",
+        "VPC",
+        "EC2",
+        "S3",
+        "IAM",
+        "RDS",
+        "High Availability",
+        "Scalability",
+        "Load Balancing",
+        "Cloud Security",
+        "Cost Optimization",
+        "Serverless Architecture"
+    ],
+    "info": "I gained hands-on expertise in designing and deploying scalable, fault-tolerant, and secure applications on AWS. I learned to architect resilient cloud systems, optimize performance and cost, apply best-practice security measures, and design multi-tier architectures using services like EC2, S3, RDS, DynamoDB, VPC, Lambda, and ELB.",
+    "company": "assests/certificates/award.png",
+    "category": "Cloud Computing",
+    "date": "2025-12-30",
+    "certificateLink": "assests/certificates/aws-saa.png"
+}
+,
     {   "title": "Meta Front-End Developer",
         "link":"https://www.coursera.org/account/accomplishments/specialization/certificate/DC89LIS25E36",
         "skills": ["Algorithms",

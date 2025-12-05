@@ -109,7 +109,7 @@
       "links": {
         "learnMore": "./signage.html"
       },
-      "image": "./assests/projects/signage/complete_playlist_demo.png"
+      "image": "./assests/projects/signage/Home Screen.png"
     },
     {
       "title": "RAID Configurations on Dell R740 | RAID 1, RAID 5 & Hot Spare Explained",
@@ -381,83 +381,88 @@
       ]
     }
   ],
-  "skills": [
-    {
-      "category": "Frontend Development",
-      "image": "./assests/skills/frontend.jpeg",
-      "skills": [
-        { "name": "HTML", "level": 100 },
-        { "name": "CSS", "level": 100 },
-        { "name": "JavaScript", "level": 100 },
-        {"name": "TypeScript", "level": 100},
-        { "name": "Dot Net", "level": 100 },
-        { "name": "React", "level": 100 },
-        { "name": "C#", "level": 80 },
-        { "name": "Vue Js", "level":90 }
-      ]
-    },
-    {
-      "category": "Backend Development",
-      "image": "./assests/skills/backend.jpeg",
-      "skills": [
-        { "name": "Node.js", "level": 100 },
-        {"name":"Java", "level":100},
-        {"name":"Spring Boot", "level":100},
-        { "name": "Express.js", "level": 100 },
-        { "name": "MongoDB", "level": 100 },
-        { "name": "SQL", "level": 100 },
+"skills": [
+  {
+    "category": "Frontend Development",
+    "image": "./assests/skills/frontend.jpeg",
+    "skills": [
+      { "name": "HTML & CSS", "level": 98, "label": "Expert" },
+      { "name": "JavaScript (ES6+)", "level": 98, "label": "Expert" },
+      { "name": "TypeScript", "level": 92, "label": "Expert" },
+      { "name": "React", "level": 95, "label": "Expert" },
+      { "name": "Vue.js", "level": 90, "label": "Expert" },
+      { "name": "C#", "level": 80, "label": "Advanced" }
+    ]
+  },
+  {
+    "category": "Backend Development",
+    "image": "./assests/skills/backend.jpeg",
+    "skills": [
+      { "name": "Node.js", "level": 95, "label": "Expert" },
+      { "name": "Express.js", "level": 92, "label": "Expert" },
+      { "name": "Java", "level": 90, "label": "Expert" },
+      { "name": "Spring Boot", "level": 90, "label": "Expert" },
+      { "name": "Python", "level": 87, "label": "Advanced" }
+    ]
+  },
+  {
+    "category": "Databases",
+    "image": "./assests/skills/backend.jpeg",
+    "skills": [
+      { "name": "MongoDB", "level": 92, "label": "Expert" },
+      { "name": "SQL (Postgres / MySQL)", "level": 90, "label": "Expert" },
+      { "name": "Redis", "level": 88, "label": "Advanced" }
+    ]
+  },
+  {
+    "category": "Cloud Technologies",
+    "image": "./assests/skills/cloud.jpeg",
+    "skills": [
+      { "name": "AWS", "level": 95, "note": "Certified", "label": "Expert" },
+      { "name": "AWS Solutions Architect – Associate", "level": 95, "note": "SAA", "label": "Expert" },
+      { "name": "Azure", "level": 88, "note": "Certified", "label": "Advanced" },
+      { "name": "GCP", "level": 80, "label": "Advanced" },
+      { "name": "Docker", "level": 94, "label": "Expert" },
+      { "name": "Nginx", "level": 100, "label": "Expert" }
+    ]
+  },
+  {
+    "category": "AI, ML & GenAI",
+    "image": "./assests/skills/ai.jpeg",
+    "skills": [
+      { "name": "Machine Learning", "level": 100, "label": "Expert" },
+      { "name": "Deep Learning", "level": 100, "label": "Expert" },
+      { "name": "AI Model Training", "level": 100, "label": "Expert" },
+      { "name": "Large Language Models (LLMs)", "level": 90, "label": "Expert" },
+      { "name": "RAG (Retrieval Augmented Generation)", "level": 88, "label": "Advanced" }
+    ]
+  },
+  {
+    "category": "DevOps & CI/CD",
+    "image": "./assests/skills/devops.jpeg",
+    "skills": [
+      { "name": "Jenkins", "level": 90, "label": "Expert" },
+      { "name": "CI/CD Pipelines", "level": 93, "label": "Expert" },
+      { "name": "Docker", "level": 94, "label": "Expert" },
+      { "name": "Linux", "level": 100, "label": "Expert" },
+      { "name": "GitHub Actions", "level": 100, "label": "Expert" },
+      { "name": "PM2", "level": 100, "label": "Expert" }
+    ]
+  }
+]
 
-        { "name": "Redis", "level": 100 },
-        { "name": "Python", "level": 100 }
-      ]
-    },
-    {
-      "category": "Cloud Technologies",
-      "image": "./assests/skills/cloud.jpeg",
-      "skills": [
-        { "name": "AWS", "level": 100 },
-        { "name": "Azure", "level": 80 },
-        { "name": "GCP", "level": 80 },
-        { "name": "Docker", "level": 100 },
-        { "name": "Nginx", "level": 100 }
-      ]
-    },
-    {
-      "category": "AI & Machine Learning",
-      "image": "./assests/skills/ai.jpeg",
-      "skills": [
-        { "name": "Machine Learning", "level": 100 },
-        { "name": "Deep Learning", "level": 100 },
-        { "name": "AI Model Training", "level": 100 },
-        { "name": "Large Language Model", "level": 90 }
-      ]
-    },
-    {
-      "category": "DevOps & Deployment",
-      "image": "./assests/skills/devops.jpeg",
-      "skills": [
-        { "name": "Docker", "level": 100 },
-        { "name": "Nginx", "level": 100 },
-        { "name": "Linux", "level": 100 },
-        { "name": "PM2", "level": 100 }
-      ]
-    },
-    {
-      "category": "Networking",
-      "image": "./assests/skills/networking.jpeg",
-      "skills": [{ "name": "WebSockets Server", "level": 100 }]
-    }
-  ],
+,
+
   "certifications": [
     {
-      "title":"Ultimate AWS Certified Solutions Architect Associate 2025",
-      "link":"https://www.udemy.com/certificate/UC-9f35e893-9bb0-4ee1-ab71-4edc9b80001d/",
+      "title":"AWS Certified Solutions Architect Associate 2025",
+      "link":"https://www.credly.com/badges/8c3cacef-b57e-45ad-aa48-742d9886cde9/public_url",
       "skills":["AWS","Cloud Computing","EC2","S3","RDS"],
-      "info":"I mastered AWS services and architecture, including EC2, S3, RDS, VPC, IAM, Lambda, CloudFormation, and more. I developed skills in designing scalable, secure cloud solutions and cost optimization strategies.",
-      "company":"assests/certificates/award.png",
+      "info": "I gained hands-on expertise in designing and deploying scalable, fault-tolerant, and secure applications on AWS. I learned to architect resilient cloud systems, optimize performance and cost, apply best-practice security measures, and design multi-tier architectures using services like EC2, S3, RDS, DynamoDB, VPC, Lambda, and ELB.",
+      "company":"assests/certificates/aws-saa.png",
       "category":"Cloud",
-      "date":"2025-09-02",
-      "certificateLink":"assests/certificates/AWS.png"
+      "date":"2025-12-30",
+      "certificateLink":"assests/certificates/AWS Certified Solutions Architect - Associate certificate.pdf"
     },
     {
     "title": "Microsoft Certified: Azure Fundamentals",

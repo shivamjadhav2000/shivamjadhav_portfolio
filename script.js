@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let blogs = [];
   let certifications = [];
   let experienceData = [];
-
+  let skillsPillars = [];
   // --- Read data from JSON file ---
   fetch("./data.json")
     .then((response) => response.json())
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       blogs = data.blogs || [];
       certifications = data.certifications || [];
       experienceData = data.experiences || [];
-
       renderQuote(0);
       renderProjects();
       renderSkills();
@@ -147,28 +146,60 @@ const renderProjects = () => {
     `).join("");
   };
 
-  const renderSkills = () => {
-    const container = document.getElementById("skills-container");
-    if (!container) return;
-    container.innerHTML = skills.map(category => `
-      <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:scale-105">
-        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">${category.category}</h3>
-        <div class="space-y-4">
-          ${category.skills.map(skill => `
-            <div>
-              <div class="flex justify-between items-center mb-1">
-                <span class="text-sm font-medium text-gray-700">${skill.name}</span>
-                <span class="text-xs font-semibold text-blue-600">${skill.level}%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-blue-700" style="width: ${skill.level}%;"></div>
-              </div>
-            </div>
-          `).join("")}
+
+function renderSkills() {
+  const container = document.querySelector("#skills-container");
+  if (!container) return;
+
+  container.innerHTML = ""; // clear previous content
+
+  skills.forEach(categoryData => {
+    const card = document.createElement("div");
+    card.className = `
+      bg-white rounded-xl p-5 shadow-md border border-gray-100 
+      hover:shadow-lg transition w-full flex flex-col
+    `;
+
+    card.innerHTML = `
+      <div class="flex items-center gap-3 mb-3 flex-wrap">
+        <img src="${categoryData.image}" alt="${categoryData.category}" class="w-10 h-10 rounded-lg object-cover flex-shrink-0">
+        <div class="min-w-0">
+          <h3 class="text-lg font-semibold truncate">${categoryData.category}</h3>
+          <p class="text-xs text-gray-500 truncate">Core expertise & representative skills</p>
         </div>
       </div>
-    `).join("");
-  };
+    `;
+
+    const list = document.createElement("ul");
+    list.className = "space-y-3 mt-3";
+
+    categoryData.skills.forEach(s => {
+      const li = document.createElement("li");
+      li.className = "flex items-center justify-between gap-4 flex-wrap";
+      li.innerHTML = `
+        <div class="min-w-0">
+          <div class="text-sm font-medium truncate">${s.name}</div>
+          <div class="text-xs text-gray-400 truncate">${s.label}</div>
+        </div>
+        <div class="text-xs text-blue-600 font-semibold flex-shrink-0">${s.note ?? ""}</div>
+      `;
+      list.appendChild(li);
+    });
+
+    card.appendChild(list);
+    container.appendChild(card); // append directly to container
+  });
+}
+
+
+
+
+
+
+
+
+
+
 
  const renderCertifications = () => {
   const container = document.getElementById("certifications-container");
@@ -180,7 +211,7 @@ const renderProjects = () => {
         <!-- Front -->
         <div class="flip-card-front flex flex-col items-center justify-center p-3 rounded-xl shadow-md border">
           <img src="${cert.company}" alt="${cert.organization}" class="w-16 h-16 mb-2 object-cover rounded">
-          <h3 class="text-sm font-bold text-gray-800">${cert.title}</h3>
+          <h3 class="text-sm font-bold text-gray-800 text-center">${cert.title}</h3>
           <p class="text-xs text-gray-500">Issued: ${cert.date}</p>
           <p class="mt-2 text-xs text-gray-500">Hover to see details</p>
         </div>
@@ -188,14 +219,15 @@ const renderProjects = () => {
         <!-- Back -->
 <div class="flip-card-back flex flex-col justify-center items-center rounded-xl shadow-md border text-center">
           <p class="text-xs text-gray-600 mb-2">${cert.info}</p>
-          <a href="${cert.link}" target="_blank" class="text-blue-600 text-sm hover:underline">View Certificate</a>
+          <a href="${cert.link}" target="_blank" class="text-blue-600 text-sm hover:underline">Verify certification</a>
+          <a href ="${cert.certificateLink}" target="_blank" class="text-blue-600 text-sm hover:underline">View Certificate</a>
         </div>
 
       </div>
     </div>
   `).join("");
 };
-
+  
   const renderBlogs = () => {
     const container = document.getElementById("blogs-container");
     if (!container) return;
