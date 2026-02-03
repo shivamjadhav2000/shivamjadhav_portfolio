@@ -38,6 +38,78 @@
   ],
   "projects": [
     {
+      "title": "Universal Digital Signage",
+      "description": "Centralized digital signage solution allowing users to create playlists, add host devices, and control displays.",
+      "highlights": [
+        "FrontEnd: React JS, JavaScript, Tailwind CSS, Material UI, Figma",
+        "Backend: Express.js, Node.js, MongoDB",
+        "DevOps: Nginx, Linux, SSH, Git, GitHub"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Material UI",
+        "Linux",
+        "Git",
+        "Docker"
+      ],
+      "links": {
+        "learnMore": "https://github.com/divisionbyinfinity/universal_digital_signage"
+      },
+      "image": "./assests/projects/signage/Home Screen.png"
+    },
+   
+    {
+      "title": "ArkDemoCRM – Custom CRM for Ark Trader",
+      "description": "Developed a tailored CRM for Ark Trader, allowing brokers to manage client accounts, track trading activity, and streamline communication. Integrated with Ark Trader API for real-time data synchronization.",
+      "highlights": [
+        "Full-stack CRM application with dashboards and reporting",
+        "Real-time updates and synchronization with trading platform",
+        "Improved client management and workflow efficiency",
+        "Secure authentication and role-based access control"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "C#",
+        "SQL",
+        "REST APIs",
+        "PostgreSQL"
+      ],
+      "links": {
+        "learnMore": "https://arkdemocrm.arktrader.io/"
+      },
+      "image": "./assests/project6.png"
+    },
+    
+    {
+      "title": "RAID Configurations on Dell R740 | RAID 1, RAID 5 & Hot Spare Explained",
+      "description": "Tutorial on setting up RAID configurations on Dell PowerEdge R740 server, including RAID 1, RAID 5, and Hot Spare options for redundancy and performance.",
+      "highlights": [
+        "Set up high-end AI server with NVIDIA V100 GPUs, 196GB RAM, RedHat OS, CUDA, and drivers",
+        "Understanding RAID 1 (mirroring) and RAID 5 (striping with parity)",
+        "Step-by-step RAID configuration",
+        "Role of Hot Spare to enhance fault tolerance"
+      ],
+      "technologies": [
+        "Dell PowerEdge R740",
+        "RAID 1",
+        "RAID 5",
+        "Hot Spare",
+        "NVIDIA V100",
+        "RedHat Linux",
+        "CUDA Toolkit"
+      ],
+      "links": {
+        "learnMore": "./ITEXP.html",
+        "youtube": "https://www.youtube.com/watch?v=-RiUdptd0Wc"
+      },
+      "image": "./assests/RAIDsetup.png"
+    },
+     {
   "title": "Health Care Dashboard",
   "description": "A web application for managing patient diagnostics and monitoring vital signs, featuring interactive charts, diagnostic lists, and responsive UI for real-time data visualization.",
   "highlights": [
@@ -65,76 +137,6 @@
   "image": "./assests/project7.png"
   
 },
-    {
-      "title": "ArkDemoCRM – Custom CRM for Ark Trader",
-      "description": "Developed a tailored CRM for Ark Trader, allowing brokers to manage client accounts, track trading activity, and streamline communication. Integrated with Ark Trader API for real-time data synchronization.",
-      "highlights": [
-        "Full-stack CRM application with dashboards and reporting",
-        "Real-time updates and synchronization with trading platform",
-        "Improved client management and workflow efficiency",
-        "Secure authentication and role-based access control"
-      ],
-      "technologies": [
-        "React.js",
-        "Node.js",
-        "C#",
-        "SQL",
-        "REST APIs",
-        "PostgreSQL"
-      ],
-      "links": {
-        "learnMore": "https://arkdemocrm.arktrader.io/"
-      },
-      "image": "./assests/project6.png"
-    },
-    {
-      "title": "Universal Digital Signage",
-      "description": "Centralized digital signage solution allowing users to create playlists, add host devices, and control displays.",
-      "highlights": [
-        "FrontEnd: React JS, JavaScript, Tailwind CSS, Material UI, Figma",
-        "Backend: Express.js, Node.js, MongoDB",
-        "DevOps: Nginx, Linux, SSH, Git, GitHub"
-      ],
-      "technologies": [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Tailwind CSS",
-        "Material UI",
-        "Linux",
-        "Git",
-        "Docker"
-      ],
-      "links": {
-        "learnMore": "./signage.html"
-      },
-      "image": "./assests/projects/signage/Home Screen.png"
-    },
-    {
-      "title": "RAID Configurations on Dell R740 | RAID 1, RAID 5 & Hot Spare Explained",
-      "description": "Tutorial on setting up RAID configurations on Dell PowerEdge R740 server, including RAID 1, RAID 5, and Hot Spare options for redundancy and performance.",
-      "highlights": [
-        "Set up high-end AI server with NVIDIA V100 GPUs, 196GB RAM, RedHat OS, CUDA, and drivers",
-        "Understanding RAID 1 (mirroring) and RAID 5 (striping with parity)",
-        "Step-by-step RAID configuration",
-        "Role of Hot Spare to enhance fault tolerance"
-      ],
-      "technologies": [
-        "Dell PowerEdge R740",
-        "RAID 1",
-        "RAID 5",
-        "Hot Spare",
-        "NVIDIA V100",
-        "RedHat Linux",
-        "CUDA Toolkit"
-      ],
-      "links": {
-        "learnMore": "./ITEXP.html",
-        "youtube": "https://www.youtube.com/watch?v=-RiUdptd0Wc"
-      },
-      "image": "./assests/RAIDsetup.png"
-    },
     {
       "title": "Accessibility Bug Prediction Model with Jira Plugin",
       "description": "Integrated a fine-tuned ALBERT model into Jira to classify accessibility-related software bug reports, under research guidance of Professor Wajdi Aljedaani.",
