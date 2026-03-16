@@ -48,6 +48,9 @@
       "technologies": [
         "React.js",
         "Node.js",
+        "C#",
+        ".Net Core",
+        ".Net MVC",
         "Express.js",
         "MongoDB",
         "Tailwind CSS",
@@ -74,7 +77,9 @@
       "technologies": [
         "React.js",
         "Node.js",
-        "C#",
+         "C#",
+        ".Net Core",
+        ".Net MVC",
         "SQL",
         "REST APIs",
         "PostgreSQL"
@@ -246,6 +251,9 @@
         "React.js",
         "Node.js",
         "Docker",
+         "C#",
+        ".Net Core",
+        ".Net MVC",
         "Kubernetes",
         "Azure",
         "Jenkins",
@@ -322,6 +330,9 @@
         "React.js",
         "Node.js",
         "Docker",
+         "C#",
+        ".Net Core",
+        ".Net MVC",
         "Ubuntu",
         "RAID 1/5",
         "CUDA"
@@ -377,6 +388,9 @@
         "GCP",
         "Firebase",
         "AWS",
+         "C#",
+        ".Net Core",
+        ".Net MVC",
         "SageMaker",
         "Lambda",
         "API Gateway"
@@ -393,7 +407,7 @@
       { "name": "TypeScript", "level": 92, "label": "Expert" },
       { "name": "React", "level": 95, "label": "Expert" },
       { "name": "Vue.js", "level": 90, "label": "Expert" },
-      { "name": "C#", "level": 80, "label": "Advanced" }
+      { "name": "C#", "level": 98, "label": "Expert" }
     ]
   },
   {
@@ -401,6 +415,8 @@
     "image": "./assests/skills/backend.jpeg",
     "skills": [
       { "name": "Node.js", "level": 95, "label": "Expert" },
+      { "name":".Net Core", "level": 98, "label": "Expert" },
+       { "name":".Net MVC", "level": 98, "label": "Expert" },
       { "name": "Express.js", "level": 92, "label": "Expert" },
       { "name": "Java", "level": 90, "label": "Expert" },
       { "name": "Spring Boot", "level": 90, "label": "Expert" },
